@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+.footer {
+	padding: rem(122) 0 rem(60);
+	background: #f0f0f0;
+	position: relative;
+	.top-btn {
+		position: absolute;
+		top: rem(-41);
+		right: rem(98);
+		animation: up 2s infinite;
+	}
+	&-wrap {
+		display: flex;
+		gap: rem(130);
+		border-top: 1px solid #dcdcdc;
+		position: relative;
+		padding-top: rem(30);
+	}
+	.policy-list {
+		display: flex;
+		align-items: center;
+		gap: rem(30);
+		position: absolute;
+		top: rem(42);
+		right: 0;
+		li {
+			a {
+				font-weight: 600;
+				font-size: rem(17);
+				letter-spacing: -0.01em;
+				color: $gray-3;
+			}
+		}
+	}
+	&-info {
+		.txt {
+			color: $gray-3;
+			&.sitename {
+				font-weight: 600;
+				font-size: rem(18);
+			}
+			&:not(.sitename) {
+				&::before {
+					content: '';
+					display: inline-block;
+					width: rem(20);
+					height: rem(20);
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: rem(20);
+					vertical-align: rem(-4);
+					margin-right: rem(5);
+				}
+			}
+			&.location {
+				&::before {
+					background-image: url(../images/icon/icon_location.svg);
+				}
+			}
+			&.tel {
+				&::before {
+					background-image: url(../images/icon/icon_call.svg);
+				}
+			}
+			&.fax {
+				&::before {
+					background-image: url(../images/icon/icon_print.svg);
+				}
+			}
+		}
+	}
+}
+
+@include mdq-max(xl) {
+	.footer {
+		&-wrap {
+			gap: rem(60);
+		}
+	}
+}
+
+@include mdq-max(lg) {
+	.footer {
+		padding: rem(80) 0 rem(60);
+		.top-btn {
+			right: 20px;
+			width: 60px;
+		}
+		&-wrap {
+			display: block;
+			padding-top: rem(48);
+		}
+		&-logo {
+			width: 184px;
+		}
+		.policy-list {
+			position: static;
+			margin-top: 30px;
+		}
+		&-info {
+			margin-top: 38px;
+		}
+		&-copyright {
+			margin-top: 24px;
+		}
+	}
+}

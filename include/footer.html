@@ -1,0 +1,47 @@
+<footer id="footer" class="footer">
+	<button type="button" class="top-btn">
+		<img src="../assets/images/icon/top_btn.svg" alt="탑 버튼">
+	</button>
+	<div class="container">
+		<div class="footer-wrap">
+			<div class="footer-logo">
+				<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+			</div>
+			<ul class="policy-list">
+				<li><a href="../pop/privacy-popup.html" class="popup-link">개인정보처리방침</a></li>
+				<li>
+					<a href="https://borealis.integrityline.com/frontpage" target="_blank">Ethics Hotline</a>
+				</li>
+				<li><a href="../pop/term-popup.html" class="popup-link">이용약관</a></li>
+			</ul>
+			<div class="footer-info mt-lg-3">
+				<p class="txt sitename">
+					<?=$SS[sitename]?>
+				</p>
+				<p class="txt location mt-4">
+					<?=$SS[AddValue2]?>
+				</p>
+				<p class="txt tel mt-2">
+					<?=$SS[sitetel]?>
+				</p>
+				<p class="txt fax mt-2">
+					<?=$SS[AddValue1]?>
+				</p>
+				<p class="footer-copyright mt-lg-4">
+					<?=$SS[sitecopyright]?>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+	document.querySelector('.top-btn').addEventListener('click', function() {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+});
+</script>

@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+// 메인 비주얼 텍스트 영역 트랜지션
+@mixin mvTextAnim($offset, $duration) {
+	transform: translateY($offset);
+	opacity: 0;
+	transition: #{$duration}ms opacity, #{$duration}ms transform;
+}
+
+@keyframes bg-effect {
+	0% {
+	  transform: scale(1.2);
+	}
+	100% {
+	  transform: scale(1);
+	}
+}
+
+// 메인 비주얼 페이지네이션 프로그레스 애니메이션
+@keyframes progress {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+.main-visual {
+	overflow: hidden;
+	.item {
+		position: relative;
+		cursor: grab;
+		&:active {
+			cursor: grabbing;
+		}
+	}
+
+	.img-bx {
+		@include img-to-bg(100svh);
+	}
+
+	.txt-bx {
+		//영역의 중앙 노출
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		text-shadow: 0 0 1em rgba(#000, 0.1);
+		.title {
+			font-family: $font-family-sub;
+			font-size: rem(100);
+			line-height: 1;
+		}
+
+		.text {
+			margin-top: 1em;
+			font-size: rem(20);
+			line-height: 1.5;
+			font-weight: 300;
+			margin-top: rem(45);
+			transition-delay: 300ms !important;
+		}
+		.learn-btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: space-between;
+			font-family: 'MyriadPro-Regular';
+			font-weight: 400;
+			color: $white;
+			line-height: rem(45);
+			width: rem(155);
+			height: rem(45);
+			border: 1px solid $gray-c;
+			padding: 0 rem(15) 0 rem(20);
+			margin-top: rem(40);
+			transition-delay: 600ms !important;
+			position: relative;
+			&::after {
+				content: '';
+				display: inline-block;
+				width: rem(19);
+				height: rem(9);
+				background: url("../images/icon/slide_next.png") no-repeat center;
+				background-size: rem(19);
+				margin-left: rem(23);
+			}
+			&::before {
+				content: '';
+				width: 0;
+				height: 100%;
+				background-color: $color-1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				transition: all 0.3s
+			}
+			@include mdq-min(lg) {
+				&:hover {
+					&::before {
+						width: 100%
+					}
+				}
+			}
+		}
+	}
+
+	.swiper-slide {
+		// S : Text Transition
+		.txt-bx {
+			.title,
+			.text,
+			.learn-btn {
+				@include mvTextAnim(50px, 1000); // * 상단 mixin 참조
+			}
+		}
+
+		// ( .swiper-slide-active 일 때 )
+		&-active {
+			.img-bx {
+				animation: bg-effect 3s forwards linear;
+			}
+			.txt-bx {
+				.title,
+				.text,
+				.learn-btn {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+		}
+
+		// E : Text Transition
+	}
+
+	.swiper-control {
+		position: absolute;
+		transform: translateX(-50%);
+		left: 50%;
+		bottom: rem(146);
+		z-index: 10;
+		.inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: rem(50);
+		}
+		.slide-btn {
+			font-family: $font-family-sub;
+			font-weight: 500;
+			line-height: rem(55);
+			color: $white;
+			width: rem(32);
+			height: rem(55);
+			border-top: 1px solid $white;
+			border-bottom: 1px solid $white;
+			position: relative;
+			transition: all 0.3s;
+			&:before {
+				content: '';
+				width: rem(48);
+				height: 100%;
+				clip-path: polygon(0 50%, 40% 100%, 41% 0);
+				background-color: transparent;
+				position: absolute;
+				top: 0;
+				left: rem(-16);
+				transition: all 0.3s;
+			}
+			&::after {
+				content: '';
+				width: rem(48);
+				height: 100%;
+				clip-path: polygon(100% 50%,66% 100%,66% 2%);
+				background-color: transparent;
+				position: absolute;
+				top: 0;
+				right: rem(-16);
+				transition: all 0.3s;
+			}
+			.btn-left {
+				width: rem(17);
+				height: rem(55);
+				position: absolute;
+				top: 0;
+				left: 0;
+				&::after {
+					content: '';
+					width: rem(32);
+					height: 1px;
+					background-color: $white;
+					position: absolute;
+					transform-origin: right top;
+					transform: rotate(-58deg);
+					top: rem(-1);
+					left: rem(-32);
+					transition: all 0.3s;
+				}
+				&::before {
+					content: '';
+					width: rem(32);
+					height: 1px;
+					background-color: $white;
+					position: absolute;
+					transform-origin: right top;
+					transform: rotate(58deg);
+					bottom: rem(1);
+					left: rem(-31);
+					transition: all 0.3s;
+				}
+			}
+			
+			.btn-right {
+				width: rem(17);
+				height: rem(55);
+				position: absolute;
+				top: 0;
+				right: 0;
+				&::after {
+					content: '';
+					width: rem(32);
+					height: 1px;
+					background-color: $white;
+					position: absolute;
+					transform-origin: left top;
+					transform: rotate(58deg);
+					top: rem(-1);
+					right: rem(-32);
+					transition: all 0.3s;
+				}
+				&::before {
+					content: '';
+					width: rem(32);
+					height: 1px;
+					background-color: $white;
+					position: absolute;
+					transform-origin: left top;
+					transform: rotate(-58deg);
+					bottom: rem(1);
+					right: rem(-31);
+					transition: all 0.3s;
+				}
+			}
+			p {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: rem(10);
+				position: relative;
+				transition: all 0.4s;
+				span {
+					opacity: 0;
+					transition: all 0.3s;
+				}
+			}
+			&.slide-prev {
+				p {
+					left: rem(26);
+					&::before {
+						content: '';
+						display: inline-block;
+						min-width: rem(19);
+						height: rem(9);
+						background-repeat: no-repeat;
+						background-size: rem(19);
+						background-position: center;
+						background-image: url(../images/icon/slide_prev.png);
+					}
+				}
+			}
+			&.slide-next {
+				p {
+					right: rem(26);
+					&::after {
+						content: '';
+						display: inline-block;
+						min-width: rem(19);
+						height: rem(9);
+						background-repeat: no-repeat;
+						background-size: rem(19);
+						background-position: center;
+						background-image: url(../images/icon/slide_next.png);
+					}
+				}
+			}
+			@include mdq-min(lg) {
+				&:hover {
+					width: rem(122);
+					background-color: $color-1;
+					border-color: $color-1;
+					transition-property: width, background-color, border-color;
+					transition-delay: 0s, 0.6s, 0.6s;
+					transition-duration: 0.3s, 0.3s, 0.3s;
+					&::before,
+					&::after {
+						border-color: $color-1;
+						background-color: $color-1;
+						transition-delay: 0.6s;
+					}
+					.btn-left,
+					.btn-right {
+						&::before,
+						&::after {
+							background-color: $color-1;
+							transition-delay: 0.6s;
+						}
+					}
+					&.slide-next {
+						p {
+							right: 0;
+						}
+					}
+					&.slide-prev {
+						p {
+							color: $white;
+							left: 0;
+						}
+					}
+					p {
+						font-size: rem(16);
+						gap: rem(10);
+						transition-delay: 0.2s;
+						span {
+							opacity: 1;
+							transition-delay: 0.6s;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include mdq-max(md) {
+		.txt-bx {
+			//폰트사이즈 일괄축소(vw)
+			font-size: 2.3vw;
+		}
+	}
+}

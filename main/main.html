@@ -1,0 +1,294 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp0 = 'main';
+    include "../include/meta.html" 
+    ?>
+	</head>
+	<body class="main-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main" id="contents">
+			<!-- S : main-visual -->
+			<section class="main-visual">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<picture class="img-bx">
+								<!-- 권장 이미지 사이즈 pc: 1920x800 -->
+								<source media="(min-width: 768px)" srcset="../assets/images/main/visual_1_pc.jpg">
+								<!-- 권장 이미지 사이즈 M: 1440x1200 -->
+								<source media="(min-width: 0px)" srcset="../assets/images/main/visual_1_m.jpg">
+								<img src="" alt="">
+							</picture>
+							<div class="txt-bx">
+								<div class="container">
+									<h2 class="title">Made to make<br> life easier</h2>
+									<p class="text">
+										DYM솔루션은 전선 및 케이블 산업 제조 분야에서<br>
+										다년간의 경험을 바탕으로 최고 수준의 서비스 및 생산 품질을 유지하면서<br>
+										유연하고 검증된 솔루션을 제공합니다.
+									</p>
+									<a href="javascript:void(0)" class="learn-btn">
+										Learn More
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-control">
+						<div class="container">
+							<div class="inner">
+								<button type="button" class="slide-btn slide-prev">
+									<span class="btn-left"></span>
+									<p>
+										<span>PREV</span>
+									</p>
+									<span class="btn-right"></span>
+								</button>
+								<button type="button" class="slide-btn slide-next">
+									<span class="btn-left"></span>
+									<p>
+										<span>NEXT</span>
+									</p>
+									<span class="btn-right"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="scroll-down">
+					<img src="../assets/images/icon/scroll_down_txt.svg" alt="스크롤 다운">
+					<img src="../assets/images/icon/scroll_down.svg" alt="스크롤 다운" class="icon">
+				</button>
+			</section>
+			<!-- E : main-visual -->
+
+			<!-- S : section-about -->
+			<section class="section section-about">
+				<div class="slide-bx">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<? for($i=1; $i < 5; $i++) {?>
+							<div class="swiper-slide" style="background-image: url();">
+								<picture class="img-bx">
+									<!-- 권장 이미지 사이즈 pc: 1920x800 -->
+									<source media="(min-width: 768px)" srcset="../assets/images/main/about_1_pc.jpg">
+									<!-- 권장 이미지 사이즈 M: 1440x1200 -->
+									<source media="(min-width: 0px)" srcset="../assets/images/main/about_1_m.jpg">
+									<img src="" alt="">
+								</picture>
+								<div class="container">
+									<div class="inner">
+										<div class="txt-bx">
+											<p class="num" data-text="0<?=$i?>">0<?=$i?></p>
+											<strong class="tit">혁신적인 기술을 통한<br> 고객 만족 실천</strong>
+											<p class="des">DYM 솔루션은 국내업계최초 스마트 팩토리 도입을 통하여<br> 제조 기술을 선도하며 품질과 효율성을 위해 생산 공정을 최적화하고 있습니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<?}?>
+						</div>
+					</div>
+					<div class="slide-control">
+						<div class="container">
+							<div class="flex-bx">
+								<button type="button" class="slide-btn slide-prev">
+									<i class="xi-angle-left-thin"></i>
+								</button>
+								<button type="button" class="slide-btn slide-next">
+									<i class="xi-angle-right-thin"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section-about -->
+			<!-- S : section-count-->
+			<section class="section section-count">
+				<picture class="bg-img" data-aos="fade-left" data-aos-anchor=".section-count">
+					<source media="(min-width: 1024px)" srcset="../assets/images/main/count_bg_pc.png">
+					<source media="(min-width: 0px)" srcset="../assets/images/main/count_bg_m.png">
+					<img src="" alt="배경 이미지">
+				</picture>
+				<div class="container">
+					<div class="inner">
+						<ul>
+							<li class="wow fadeInUp">
+								<div class="txt-bx">
+									<p class="top">
+										<strong class="counterup" data-counterup-time="1000">30</strong>+
+									</p>
+									<p class="middle">Years</p>
+									<p class="bottom">DYM successfully fulfilled its expectation <br>in Business over 30 years</p>
+								</div>
+							</li>
+							<li class="wow fadeInUp" data-wow-delay="0.1s">
+								<div class="txt-bx">
+									<p class="top">
+										<strong class="counterup" data-counterup-time="900">130</strong>+
+									</p>
+									<p class="middle">Customers</p>
+									<p class="bottom">DYM served more than 130 customers <br> in 50 different countries.</p>
+								</div>
+							</li>
+							<li class="wow fadeInUp" data-wow-delay="0.2s">
+								<div class="txt-bx">
+									<p class="top">
+										<strong class="counterup" data-counterup-time="800">4</strong> Mil.
+									</p>
+									<p class="middle">km</p>
+									<p class="bottom">DYM's product used for<br> 4 Mil. KM length of Cables</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- E : section-count-->
+			<!-- S : section-release-->
+			<section class="section section-release">
+				<div class="container">
+					<div class="flex-bx">
+						<div class="sec-tit">
+							<h2 class="tit wow fadeInLeft">New release</h2>
+						</div>
+						<div class="list-bx wow fadeInRight">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<? for($i=1; $i < 6; $i++) {?>
+									<div class="swiper-slide">
+										<a href="javascript:void(0)">
+											<div class="img-bx" style="background-image: url(../assets/images/main/release_img_1.jpg);">
+												<img src="../assets/images/base_210x316.png" alt="등록된 이미지 출력">
+											</div>
+											<div class="txt-bx">
+												<p class="tit">제목출력영역입니다. 제목출력영역입니다. 제목출력영역입니다. 제목출력영역입니다. 제목출력영역입니다. </p>
+												<p class="date">24. 08. 01</p>
+											</div>
+										</a>
+									</div>
+									<?}?>
+								</div>
+							</div>
+							<div class="slide-control">
+								<button type="button" class="slide-btn slide-prev">
+									<i class="xi-angle-left-min"></i>
+								</button>
+								<button type="button" class="slide-btn slide-next">
+									<i class="xi-angle-right-min"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section-release-->
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+		<script src="../assets/js/lib/jquery.waypoints.min.js"></script>
+		<script type="text/javascript" src="../assets/js/lib/jquery.counterup.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded",function(){
+				/*메인 비주얼 슬라이드*/
+				var visualSwiper = new Swiper('.main-visual .swiper-container', {
+					loop: true,
+					effect: 'fade',
+					speed: 1000,
+					autoplay: {
+						delay: 4000,
+						disableOnInteraction: false,
+					},
+					autoHeight: true,
+					navigation: {
+						nextEl: '.main-visual .slide-next',
+						prevEl: '.main-visual .slide-prev',
+					},
+				});
+
+				/*about 슬라이드*/
+				const aboutSlide = new Swiper('.section-about .swiper-container', {
+					loop: true,
+					effect: 'fade',
+					speed: 1000,
+					autoplay: {
+						delay: 4000,
+						disableOnInteraction: false,
+					},
+					autoHeight: true,
+					navigation: {
+						nextEl: '.section-about .slide-next',
+						prevEl: '.section-about .slide-prev',
+					},
+				});
+
+				/*release 슬라이드 1024px를 기준으로 슬라이드 기능 토글*/
+				let releaseSlide;
+				const initSwiper = () => {
+					if (window.innerWidth <= 1024 && !releaseSlide) {
+						releaseSlide = new Swiper('.section-release .swiper-container', {
+							slidesPerView: 1.3,
+							spaceBetween: 30,
+							loop: true,
+							speed: 1000,
+							autoplay: {
+								delay: 4000,
+								disableOnInteraction: false,
+							},
+							autoHeight: true,
+							breakpoints: {
+								576: {
+									slidesPerView: 2.4,  //브라우저가 768보다 클 때
+									spaceBetween: 40,
+								},
+								768: {
+									slidesPerView: 3.2,  //브라우저가 1024보다 클 때
+									spaceBetween: 30,
+								},
+							},
+							navigation: {
+								nextEl: '.section-release .slide-next',
+								prevEl: '.section-release .slide-prev',
+							},
+						});
+					} else if (window.innerWidth > 1024 && releaseSlide) {
+						releaseSlide.destroy(true, true);
+						releaseSlide = null;
+					}
+				};
+
+				let resizeTimeout;
+				window.addEventListener('resize', () => {
+					if (resizeTimeout) clearTimeout(resizeTimeout);
+					resizeTimeout = setTimeout(() => {
+						initSwiper();
+					}, 200);
+				});
+
+				// Initialize on page load
+				initSwiper();
+
+				//카운트
+				$('.main .counterup').counterUp({
+					delay: 10,
+					time: 1500,
+				});
+				
+				document.querySelector('.scroll-down').addEventListener('click', function() {
+					const target = document.querySelector('.section-about');
+					const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 20; // -20은 약간의 여유 공간을 주기 위해 사용
+					window.scrollTo({
+						top: targetPosition,
+						behavior: 'smooth'
+					});
+				});
+			})
+		</script>
+	</body>
+</html>

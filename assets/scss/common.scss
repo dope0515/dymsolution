@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Utilities
+@import 'utilities';
+
+// Font-face
+@import 'font-face';
+
+// Reset
+@import 'reset';
+
+// Library
+@import 'library';
+
+// Layout
+@import 'layout';
+
+// Components
+@import 'components';
+
+// Grid
+@import 'grid';
+
+// Board Template
+// @import 'board';
+
+// Board Template Old Version
+@import 'board.old';
+// @import "board";
+
+// board
+@import 'board_new';
+
+@keyframes down {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translateY(10px);
+    }
+    40% {
+      transform: translate(0);
+    }
+}
+
+
+@keyframes up {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translateY(-10px);
+    }
+    40% {
+      transform: translate(0);
+    }
+}
+
+
+.select-lang {
+    position: relative;
+    .lang-btn {
+        font-family: 'Manrope';
+        font-weight: 800;
+        width: rem(83);
+        height: rem(32);
+        text-align: left;
+        padding-left: rem(22);
+        background-image: url(../images/main/lang_bx.png);
+        background-repeat: no-repeat;
+        background-size: rem(83);
+        background-position: center center;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            width: rem(11);
+            height: rem(9);
+            background-image: url(../images/icon/lang_arrow.png);
+            background-repeat: no-repeat;
+            background-size: rem(11);
+            background-position: center center;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: rem(16);
+        }
+    }
+    .lang-list {
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        top: 95%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s;
+        li {
+            a {
+                display: block;
+                padding-left: rem(22);
+                font-family: 'Manrope';
+                font-weight: 800;
+                line-height: rem(32);
+                width: rem(83);
+                height: rem(32);
+                background-image: url(../images/main/lang_bx.png);
+                background-repeat: no-repeat;
+                background-size: rem(83);
+                background-position: center center;
+            }
+        }
+        &.active {
+            top: calc(100% - rem(2));
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

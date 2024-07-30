@@ -1,0 +1,242 @@
+@charset "UTF-8";
+//pretendard 100 - 900
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Black.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-SemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 300;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Light.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 200;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-ExtraLight.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 100;
+	font-display: swap;
+    src: local('Pretendard'), url('../fonts/Pretendard-Thin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'TheJamsil';
+    font-weight: 100;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Thin.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Thin.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Thin.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Thin.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TheJamsil';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TheJamsil';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TheJamsil';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TheJamsil';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TheJamsil';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/TheJamsil/TheJamsil-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+/* montserrat-regular - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/montserrat-v18-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local(''), url('../fonts/montserrat-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/montserrat-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/montserrat-v18-latin-regular.woff') format('woff'), /* Modern Browsers */ url('../fonts/montserrat-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/montserrat-v18-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* montserrat-500 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/montserrat-v18-latin-500.eot'); /* IE9 Compat Modes */
+	src: local(''), url('../fonts/montserrat-v18-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/montserrat-v18-latin-500.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/montserrat-v18-latin-500.woff') format('woff'), /* Modern Browsers */ url('../fonts/montserrat-v18-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/montserrat-v18-latin-500.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* montserrat-600 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/montserrat-v18-latin-600.eot'); /* IE9 Compat Modes */
+	src: local(''), url('../fonts/montserrat-v18-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/montserrat-v18-latin-600.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/montserrat-v18-latin-600.woff') format('woff'), /* Modern Browsers */ url('../fonts/montserrat-v18-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/montserrat-v18-latin-600.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* montserrat-700 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/montserrat-v18-latin-700.eot'); /* IE9 Compat Modes */
+	src: local(''), url('../fonts/montserrat-v18-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/montserrat-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/montserrat-v18-latin-700.woff') format('woff'), /* Modern Browsers */ url('../fonts/montserrat-v18-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/montserrat-v18-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* montserrat-800 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/montserrat-v18-latin-800.eot'); /* IE9 Compat Modes */
+	src: local(''), url('../fonts/montserrat-v18-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/montserrat-v18-latin-800.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/montserrat-v18-latin-800.woff') format('woff'), /* Modern Browsers */ url('../fonts/montserrat-v18-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/montserrat-v18-latin-800.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* montserrat-900 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/montserrat-v18-latin-900.eot'); /* IE9 Compat Modes */
+	src: local(''), url('../fonts/montserrat-v18-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/montserrat-v18-latin-900.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/montserrat-v18-latin-900.woff') format('woff'), /* Modern Browsers */ url('../fonts/montserrat-v18-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/montserrat-v18-latin-900.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/*Manrope*/
+@font-face {
+	font-family: 'Manrope';
+    font-weight: 300;
+    font-style: normal;
+	src: url("../fonts/Manrope-Light.woff2") format("woff2"),
+		url("../fonts/Manrope-Light.woff") format("woff");
+		font-display: swap;
+}
+@font-face {
+	font-family: 'Manrope';
+    font-weight: 400;
+    font-style: normal;
+	src: url("../fonts/Manrope-Regular.woff2") format("woff2"),
+		url("../fonts/Manrope-Regular.woff") format("woff");
+		font-display: swap;
+}
+@font-face {
+	font-family: 'Manrope';
+    font-weight: 500;
+    font-style: normal;
+	src: url("../fonts/Manrope-Medium.woff2") format("woff2"),
+		url("../fonts/Manrope-Medium.woff") format("woff");
+		font-display: swap;
+}
+@font-face {
+	font-family: 'Manrope';
+    font-weight: 600;
+    font-style: normal;
+	src: url("../fonts/Manrope-Semibold.woff2") format("woff2"),
+		url("../fonts/Manrope-Semibold.woff") format("woff");
+		font-display: swap;
+}
+@font-face {
+	font-family: 'Manrope';
+    font-weight: 700;
+    font-style: normal;
+	src: url("../fonts/Manrope-Bold.woff2") format("woff2"),
+		url("../fonts/Manrope-Bold.woff") format("woff");
+		font-display: swap;
+}
+@font-face {
+	font-family: 'Manrope';
+    font-weight: 800;
+    font-style: normal;
+	src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"),
+		url("../fonts/Manrope-ExtraBold.woff") format("woff");
+		font-display: swap;
+}
+
+/*MyriadPro*/
+@font-face {
+    font-family: "MyriadPro-Regular";
+    src: url("../fonts/MyriadPro-Regular.woff2")format("woff2"),
+    url("../fonts/MyriadPro-Regular.woff")format("woff")
+}

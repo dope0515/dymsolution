@@ -1,0 +1,61 @@
+<ul class="skip">
+	<li><a class="link" href="#contents">본문내용 바로가기</a></li>
+	<li><a class="link" href="#header">헤더 바로가기</a></li>
+	<li><a class="link" href="#footer">푸터 바로가기</a></li>
+</ul>
+
+<header id="header" class="header">
+	<div class="container header-wrap">
+		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+			<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+		</a>
+		<div class="nav__bg"></div>
+		<!-- S : navigation -->
+		<nav class="nav">
+			<? include "../include/nav.html" ?>
+		</nav>
+		<!-- E : navigation -->
+		<!-- S : 언어선택-->
+		<div class="select-lang d-none d-lg-block">
+			<button type="button" class="lang-btn">KR</button>
+			<ul class="lang-list">
+				<li>
+					<a href="javascript:void(0)" onclick="alert('준비중입니다.')">EN</a>
+				</li>
+			</ul>
+		</div>
+		<!-- E : 언어선택-->
+		<button class="nav-mobile__btn" type="button">
+			<img src="../assets/images/icon/ham_btn.png" alt="모바일메뉴버튼">
+		</button>
+	</div>
+</header>
+
+<!-- S : mobile navigation -->
+<? include "../include/aside.html" ?>
+<!-- E : mobile navigation -->
+
+<!-- S : loading image -->
+<div class="loading-image">
+	<img src="../assets/images/icon/loading.svg" alt="loading" />
+</div>
+<!-- E : loading image -->
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    /* 언어선택 드롭다운 */
+    const langBtns = document.querySelectorAll('.select-lang .lang-btn');
+
+    langBtns.forEach(function(langBtn) {
+        langBtn.addEventListener('click', function() {
+        // 클릭한 버튼의 다음 형제 요소가 .lang-list인 경우 이를 토글
+        const langList = this.nextElementSibling;
+        if (langList && langList.classList.contains('lang-list')) {
+            this.classList.toggle('active');
+            langList.classList.toggle('active');
+            console.log('클릭?');
+        }
+        });
+    });
+});
+</script>
