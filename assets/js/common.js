@@ -703,3 +703,35 @@ function DaumPostcode(uzip = '', uaddr1 = '', uaddr2 = '') {
     }).open();
   });
 }
+
+$(document).ready(function(){
+  checkScroll(); // 페이지가 로드될 때 스크롤 위치를 확인하고 클래스 추가
+
+  $(window).scroll(function(){
+    checkScroll(); // 스크롤 시에도 스크롤 위치를 확인하고 클래스 추가
+  });
+
+  function checkScroll() {
+    var curr = $(window).scrollTop();
+
+    if(curr > 50){
+      $('.header').addClass('scrolled');
+    } else {
+      $('.header').removeClass('scrolled');
+    }
+  }
+  
+  $('.popup-link').on('click',function(){
+    $('body').addClass('body-fixed');
+  })
+  $(document).on('click','.mfp-close',function(){
+    $('body').removeClass('body-fixed');
+  })
+  // ESC 키 눌렀을 때 팝업이 열려있는 경우
+  $(document).keyup(function(e) {
+    if (e.key === "Escape" && $.magnificPopup.instance.isOpen) {
+      $.magnificPopup.close();
+      $('body').removeClass('body-fixed'); // ESC 키 눌렀을 때 body-fixed 클래스 제거
+    }
+  });
+})

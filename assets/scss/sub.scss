@@ -5,3 +5,150 @@
 
 // Mixins
 @import 'mixins';
+
+.main {
+    margin-top: rem(100);
+}
+.footer {
+    margin-top: rem(180);
+    @include mdq-max(md) {
+        margin-top: rem(80);
+    }
+}
+.sec-tit {
+    text-align: center;
+    margin-bottom: rem(110);
+    .tit {
+        font-weight: 600;
+        font-size: rem(40);
+        color: rgba($color: $black, $alpha: 0.9);
+        letter-spacing: -0.05em;
+    }
+}
+
+.section {
+    .container {
+        max-width: 1440px;
+    }
+    &-ceo {
+        .txt-bx {
+            .txt {
+                font-weight: 300;
+                font-size: rem(18);
+                line-height: 2;
+                color: rgba($color: $black, $alpha: 0.9);
+                letter-spacing: -0.025em;
+                & + .txt {
+                    margin-top: rem(50);
+                }
+            }
+        }
+        .bx-1 {
+            display: flex;
+            align-items: center;
+            gap: rem(30);
+            .img-bx {
+                width: 50%;
+            }
+            .txt-bx {
+                width: 50%;
+                position: relative;
+                padding-top: rem(180);
+                .tit {
+                    font-weight: 600;
+                    font-size: rem(60);
+                    color: $color-1;
+                    letter-spacing: -0.05em;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: -29.5%;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .bx-2 {
+            .txt-bx {
+                .line-img {
+                    float: right;
+                }
+                .tit {
+                    font-weight: 600;
+                    font-size: rem(30);
+                    letter-spacing: -0.025em;
+                    color: $color-1;
+                }
+            }
+        }
+    }
+}
+
+@include mdq-max(xxl) {
+    .section {
+        &-ceo {
+            .bx-1 {
+                align-items: flex-start;
+                padding-bottom: rem(50);
+                .img-bx {
+                    position: sticky;
+                    top: 80px;
+                    left: 0;
+                }
+                .txt-bx {
+                    padding-top: 0;
+                    .tit {
+                        position: static;
+                        white-space: wrap;
+                        margin-bottom: rem(50);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mdq-max(md) {
+    .section {
+        &-ceo {
+            .txt-bx {
+                .txt {
+                    & + .txt {
+                        margin-top: rem(20);
+                    }
+                }
+            }
+            .bx-1 {
+                display: block;
+                .img-bx {
+                    width: 100%;
+                    text-align: center;
+                    position: static;
+                    img {
+                        max-width: 300px;
+                    }
+                }
+                .txt-bx {
+                    width: 100%;
+                    margin-top: rem(20);
+                    .tit {
+                        font-size: rem(36);
+                        margin-bottom: rem(30);
+                    }
+                }
+            }
+            .bx-2 {
+                .txt-bx {
+                    .line-img {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        float: none;
+                    }
+                    .tit {
+                        font-size: rem(26);
+                    }
+                }
+            }
+        }
+    }
+}

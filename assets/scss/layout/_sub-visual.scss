@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@keyframes txtfill {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .sub-visual {
   position: relative;
   background-position: center;
@@ -22,11 +30,29 @@
     }
   }
   &__title {
-    width: 100%;
-    font-size: em(56);
-    letter-spacing: letterSpacing(-25);
-    line-height: 1.2;
-    font-weight: 600;
+    display: inline-block;
+    font-family: 'TheJamsil';
+    font-size: rem(90);
+    line-height: 1;
+    font-weight: 300;
+    text-align: end;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px $white;
+    position: relative;
+    &::after {
+        content: attr(data-text);
+        -webkit-text-fill-color: $white;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+    }
+    &.aos-animate {
+      &::after {
+        animation: txtfill 1s forwards 1s;
+      }
+    }
   }
   &__txt {
     margin-top: 1em;

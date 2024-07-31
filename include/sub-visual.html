@@ -1,5 +1,19 @@
 <div class="sub-visual" style="background-image: url(../assets/images/sub/visual_<?=$P_dp1?>.jpg)">
 	<div class="sub-visual__wrapper container">
-		<h1 class="sub-visual__title"><?=${nav_.$P_dp1}?></h1>
+		<strong class="sub-visual__title" data-aos="fade-in" data-text="<?=${nav_.$P_dp1}?>"><?=${nav_.$P_dp1}?></strong>
 	</div>
+	<!-- S : sub-nav : bar -->
+	<div class="sub-nav sub-nav--bar">
+		<img src="../assets/images/main/logo.svg" alt="디와이엠솔루션">
+		<? if ($P_dp3 != null) {?>
+		<ul class="sub-nav__wrap sub-nav-clone--depth3">
+			<!-- active 된 메뉴의 depth3 clone 하기 -->
+		</ul>
+		<?}else{?>
+		<ul class="sub-nav__wrap sub-nav-clone--depth2">
+			<!-- active 된 메뉴의 depth2 clone 하기 -->
+		</ul>
+		<?}?>
+	</div>
+	<!-- E : sub-nav : bar -->
 </div>

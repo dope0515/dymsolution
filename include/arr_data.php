@@ -70,7 +70,7 @@ $nav_policy_3 = "이메일무단수집거부";
 
 // 네비게이션 하이퍼링크
 $nav_1_href = "../about/about-us.html";
-$nav_1_1_href = "../about/about-us.html";
+$nav_1_2_href = "../about/ceo.html";
 
 $nav_policy_href = "../policy/privacy.html";
 $nav_policy_1_href = "../policy/privacy.html";

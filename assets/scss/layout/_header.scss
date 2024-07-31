@@ -2,10 +2,9 @@
 $header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
 
 .header {
-	border-bottom: 1px solid #ddd;
-	background-color: #fff;
 	width: 100%;
 	z-index: 500;
+	transition: background-color 0.3s;
 	@if ($header-fix == true) {
 		position: fixed;
 		top: 0;
@@ -31,6 +30,18 @@ $header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
 		.logo {
 			flex: 0 0 auto;
 			transition: all 0.3s;
+			position: relative;
+			img {
+				transition: all 0.3s;
+			}
+			.logo-color {
+				position: absolute;
+				transform: translateY(-50%);
+				top: 50%;
+				left: 0;
+				opacity: 0;
+				visibility: hidden;
+			}
 			@include mdq-max(xxl) {
 				width: 200px;
 			}
